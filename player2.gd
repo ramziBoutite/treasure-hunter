@@ -1,11 +1,13 @@
 extends CharacterBody2D
 
-@export var maxspeed = 100000
-@export var acceleration = 100000
-@export var friction = 300
+@export var maxspeed = 10000
+@export var acceleration = 1500
+@export var friction = 1000
 @onready var axis = Vector2.ZERO
 func _physics_process(delta):
+	get_input_axis()
 	move(delta) 
+	
 	
 	
 	
@@ -19,10 +21,11 @@ func get_input_axis():
 	
 func move(delta):
 	if axis == Vector2.ZERO:
-		apply_fric(delta*friction) #apply friction
+		apply_fric(delta*friction) 
 	else:
-		apply_accel(axis*acceleration*delta)#apply move
+		apply_accel(axis*acceleration*delta)
 	move_and_slide()
+
 func apply_fric(amount):
 	if velocity.length() > amount :
 		velocity -= velocity.normalized() * amount 
@@ -34,3 +37,4 @@ func apply_fric(amount):
 func apply_accel(accel):
 	velocity += accel
 	velocity= velocity.limit_length(maxspeed)
+
