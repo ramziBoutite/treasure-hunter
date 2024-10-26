@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-@export var move_speed=4
-@export var max_speed=20
-@export var friction=5
+@export var move_speed=40
+@export var max_speed=200
+@export var friction=50
 @export var rotaion_sensitivity=1.9
 
 
@@ -40,7 +40,7 @@ func new_control(delta):
 		var movement_direction = Input.is_action_pressed("ui_up")
 		rotation += rotation_direction*rotaion_sensitivity*delta
 		
-		velocity  += transform.x*movement_direction.norlalized()*move_speed*delta
+		velocity  += transform.x*int(movement_direction)*move_speed*delta
 		velocity.limit_length(max_speed)
 	#velocity -= velocity.normalized()
 		move_and_slide()
@@ -51,7 +51,7 @@ func new_control(delta):
 		var rotation_direction = Input.get_axis("left","right")
 		var movement_direction = Input.is_action_pressed("up")
 		rotation += rotation_direction*rotaion_sensitivity*delta
-		velocity  += transform.x*movement_direction.normalized()*move_speed*delta
+		velocity  += transform.x*int(movement_direction)*move_speed*delta
 		velocity.limit_length(max_speed)
 		#velocity -= velocity.normalized()
 		move_and_slide()
