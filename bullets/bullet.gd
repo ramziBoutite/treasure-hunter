@@ -3,7 +3,7 @@ extends Area2D
 
 
 var target:Vector2
-var speed = 100
+var speed = 200
 var angle:float
 
 @onready var delte_timer = $Timer
@@ -15,7 +15,7 @@ func _ready():
 
 
 func _physics_process(delta):
-	position+=target.normalized()*speed
+	position+=target.normalized()*speed*delta
 
 func set_direction(angle_to_target_vec,firing_position,target_vec):
 	rotation_degrees=angle_to_target_vec

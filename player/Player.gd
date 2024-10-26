@@ -1,10 +1,11 @@
 extends CharacterBody2D
 
-@export var move_speed=3
+@export var move_speed=4
+@export var max_speed=20
+@export var friction=5
+@export var rotaion_sensitivity=1.9
 
-@export var rotaion_sensitivity=3
 
-@export var max_speed=10
 
 @onready var canon_bullet = preload("res://bullets/bullet.tscn")
 
@@ -36,22 +37,23 @@ func new_control(delta):
 		
 		
 		var rotation_direction = Input.get_axis("ui_left","ui_right")
-		var movement_direction = abs(Input.get_axis("ui_down","ui_up"))
+		var movement_direction = Input.is_action_pressed("ui_up")
 		rotation += rotation_direction*rotaion_sensitivity*delta
-		velocity  += transform.x*movement_direction*move_speed
-		if velocity.length()> max_speed:
-			velocity.x = max_speed
+		
+		velocity  += transform.x*movement_direction.norlalized()*move_speed*delta
+		velocity.limit_length(max_speed)
+	#velocity -= velocity.normalized()
 		move_and_slide()
 
 	if current_player=="2":
 		if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
 			shoot()
 		var rotation_direction = Input.get_axis("left","right")
-		var movement_direction = abs(Input.get_axis("down","up"))
+		var movement_direction = Input.is_action_pressed("up")
 		rotation += rotation_direction*rotaion_sensitivity*delta
-		velocity  += transform.x*movement_direction*move_speed
-		if velocity.length()> max_speed:
-			velocity.x= max_speed
+		velocity  += transform.x*movement_direction.normalized()*move_speed*delta
+		velocity.limit_length(max_speed)
+		#velocity -= velocity.normalized()
 		move_and_slide()
 
 func shoot():
