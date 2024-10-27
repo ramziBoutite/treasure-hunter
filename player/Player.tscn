@@ -1,16 +1,13 @@
 [gd_scene load_steps=6 format=3 uid="uid://n6mb5qyd4lpg"]
 
 [ext_resource type="Script" path="res://player/Player.gd" id="1_e3v4i"]
-
 [ext_resource type="Texture2D" uid="uid://c0770qcfhh2go" path="res://assets/kenney_pirate-pack/PNG/Default size/Ship parts/cannonBall.png" id="2_3uh3w"]
 [ext_resource type="Texture2D" uid="uid://mg20sysqllsg" path="res://assets/kenney_pirate-pack/PNG/Default size/Ships/ship (9).png" id="2_hkwxu"]
 [ext_resource type="Theme" uid="uid://dvn0p83b3tsxy" path="res://assets/fonts/text.tres" id="3_wl71h"]
 
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_78d4d"]
 radius = 32.0
 height = 110.0
-
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_e3v4i")
@@ -63,7 +60,6 @@ border_color = Color(1, 1, 0, 1)
 border_width = 0.3
 editor_only = false
 
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = -1.5708
 shape = SubResource("CapsuleShape2D_78d4d")
@@ -73,10 +69,8 @@ rotation = -1.5708
 texture = ExtResource("2_hkwxu")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.5, 0.5)
 
 [node name="coldowntimer" type="Timer" parent="."]
-
 one_shot = true
 
 [node name="position" type="Node2D" parent="."]
@@ -89,7 +83,6 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-
 offset_left = -575.0
 offset_top = -319.0
 offset_right = 577.0
@@ -99,7 +92,6 @@ grow_vertical = 2
 theme = ExtResource("3_wl71h")
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/font_size = 100
-
 text = "You loose Bro"
 horizontal_alignment = 1
 vertical_alignment = 1

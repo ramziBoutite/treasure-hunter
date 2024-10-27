@@ -34,11 +34,9 @@ func _ready():
 
 func set_bullet(bullet,bulletrotation,firing_pos,target):
 	$HBoxContainer/SubViewportContainer1/SubViewport/split_screen_map.add_child(bullet)
-<<<<<<< Updated upstream
+
 
 	var random_shif:=Vector2(randi_range(-20,20),randi_range(-20,20))
-=======
-	var random_shif:=Vector2(randi_range(-5,5),randi_range(-5,5))
->>>>>>> Stashed changes
+
 	bullet.set_direction(bulletrotation,firing_pos,target+random_shif)
 
