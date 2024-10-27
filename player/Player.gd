@@ -1,15 +1,18 @@
 extends CharacterBody2D
 
-@export var move_speed=40
-@export var max_speed=200
-@export var friction=50
-@export var rotaion_sensitivity=1.9
 
+@export var move_speed=500
+
+@export var rotaion_sensitivity=5
 
 
 @onready var canon_bullet = preload("res://bullets/bullet.tscn")
 
 @onready var coldowntimer = $coldowntimer
+
+
+var max_health = 100
+var current_health = max_health
 
 
 @export var current_player = "1"
@@ -37,23 +40,22 @@ func new_control(delta):
 		
 		
 		var rotation_direction = Input.get_axis("ui_left","ui_right")
-		var movement_direction = Input.is_action_pressed("ui_up")
+
+		var movement_direction = abs(Input.get_axis("ui_down","ui_up"))
 		rotation += rotation_direction*rotaion_sensitivity*delta
-		
-		velocity  += transform.x*int(movement_direction)*move_speed*delta
-		velocity.limit_length(max_speed)
-	#velocity -= velocity.normalized()
+		velocity  = transform.x*movement_direction*move_speed
+
 		move_and_slide()
 
 	if current_player=="2":
 		if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
 			shoot()
 		var rotation_direction = Input.get_axis("left","right")
-		var movement_direction = Input.is_action_pressed("up")
+
+		var movement_direction = abs(Input.get_axis("down","up"))
 		rotation += rotation_direction*rotaion_sensitivity*delta
-		velocity  += transform.x*int(movement_direction)*move_speed*delta
-		velocity.limit_length(max_speed)
-		#velocity -= velocity.normalized()
+		velocity  = transform.x*movement_direction*move_speed
+
 		move_and_slide()
 
 func shoot():
@@ -69,9 +71,21 @@ func shoot():
 			print("signal emmited")
 			coldowntimer.start()
 
+
+func handel_health(damage):
+	if current_health<=5:
+		loos()
+	else:
+		current_health-=damage
+		$UX/progress_bar.value=current_health
+
 func loos():
+	rotation_degrees=0
 	$Ship_sprite.hide()
+	$UX.hide()
 	$Label.show()
 	$CollisionShape2D.queue_free()
-	set_process(false)
-	
+	set_physics_process(false)
+
+
+
