@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dvn0p83b3tsxy"]
+
+[ext_resource type="FontFile" uid="uid://b7rwt0qwlqxp3" path="res://assets/fonts/OCRAEXT.TTF" id="1_5g6hj"]
+
+[resource]
+default_font = ExtResource("1_5g6hj")
