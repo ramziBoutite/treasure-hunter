@@ -12,6 +12,7 @@ func _ready():
 	var player2=Player2.instantiate()
 	$HBoxContainer/SubViewportContainer2/SubViewport.add_child(player2)
 	player2.current_player="2"
+	player2.z_index=3
 	player2.find_child("Ship_sprite").modulate = Color.GREEN
 	player2.position = Vector2(500,200)
 	
