@@ -10,6 +10,7 @@ radius = 32.0
 height = 110.0
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
+z_index = 3
 script = ExtResource("1_e3v4i")
 
 [node name="UX" type="CanvasLayer" parent="."]
