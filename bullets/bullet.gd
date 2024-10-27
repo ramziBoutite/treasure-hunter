@@ -3,7 +3,10 @@ extends Area2D
 
 
 var target:Vector2
-var speed = 100
+
+var speed = 200
+
+
 var angle:float
 
 @onready var delte_timer = $Timer
@@ -15,7 +18,9 @@ func _ready():
 
 
 func _physics_process(delta):
+
 	position+=target.normalized()*speed
+
 
 func set_direction(angle_to_target_vec,firing_position,target_vec):
 	rotation_degrees=angle_to_target_vec
@@ -31,7 +36,7 @@ func _on_timer_timeout():
 
 
 func _on_body_entered(body):
-	body.handel_health(damage)
-	body.loos()
+
 	if body.is_in_group("player"):
-		body.loos()
+		body.handel_health(damage)
+

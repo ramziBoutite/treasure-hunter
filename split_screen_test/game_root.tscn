@@ -1,11 +1,15 @@
+
 [gd_scene load_steps=4 format=3 uid="uid://dwtefpb0do263"]
 
 [ext_resource type="Script" path="res://split_screen_test/game_root.gd" id="1_o73ex"]
-[ext_resource type="PackedScene" uid="uid://74hfe4pml680" path="res://deathmatch-map.tscn" id="2_ylstg"]
+[ext_resource type="PackedScene" uid="uid://74hfe4pml680" path="res://deathmatch-map.tscn" id="2_bajl3"]
 [ext_resource type="PackedScene" uid="uid://n6mb5qyd4lpg" path="res://player/Player.tscn" id="3_hf53w"]
+
 
 [node name="Game_Root" type="Node"]
 script = ExtResource("1_o73ex")
+
+
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -16,9 +20,11 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
+
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -32,11 +38,13 @@ handle_input_locally = false
 size = Vector2i(574, 648)
 render_target_update_mode = 4
 
-[node name="split_screen_map" parent="HBoxContainer/SubViewportContainer1/SubViewport" instance=ExtResource("2_ylstg")]
+
+[node name="split_screen_map" parent="HBoxContainer/SubViewportContainer1/SubViewport" instance=ExtResource("2_bajl3")]
 
 [node name="Player" parent="HBoxContainer/SubViewportContainer1/SubViewport/split_screen_map" instance=ExtResource("3_hf53w")]
 z_index = 3
-position = Vector2(1000, 1000)
+position = Vector2(500, 200)
+
 
 [node name="SubViewportContainer2" type="SubViewportContainer" parent="HBoxContainer"]
 layout_mode = 2

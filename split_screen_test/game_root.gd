@@ -12,8 +12,10 @@ func _ready():
 	var player2=Player2.instantiate()
 	$HBoxContainer/SubViewportContainer2/SubViewport.add_child(player2)
 	player2.current_player="2"
+
 	player2.z_index=3
 	player2.find_child("Ship_sprite").modulate = Color.GREEN
+
 	player2.position = Vector2(500,200)
 	
 	for childe in $HBoxContainer/SubViewportContainer1/SubViewport/split_screen_map.get_children():
@@ -32,4 +34,7 @@ func _ready():
 
 func set_bullet(bullet,bulletrotation,firing_pos,target):
 	$HBoxContainer/SubViewportContainer1/SubViewport/split_screen_map.add_child(bullet)
-	bullet.set_direction(bulletrotation,firing_pos,target)
+
+	var random_shif:=Vector2(randi_range(-20,20),randi_range(-20,20))
+	bullet.set_direction(bulletrotation,firing_pos,target+random_shif)
+
