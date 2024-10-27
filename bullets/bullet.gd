@@ -31,4 +31,5 @@ func _on_timer_timeout():
 
 
 func _on_body_entered(body):
-	body.loos()
+	if body.is_in_group("player"):
+		body.loos()
