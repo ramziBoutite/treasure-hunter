@@ -32,3 +32,4 @@ func _on_timer_timeout():
 
 func _on_body_entered(body):
 	body.handel_health(damage)
+	body.loos()

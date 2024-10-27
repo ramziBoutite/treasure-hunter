@@ -77,4 +77,9 @@ func loos():
 	$Label.show()
 	$CollisionShape2D.queue_free()
 	set_physics_process(false)
+func loos():
+	$Ship_sprite.hide()
+	$Label.show()
+	$CollisionShape2D.queue_free()
+	set_process(false)
 	
