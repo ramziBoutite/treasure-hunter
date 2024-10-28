@@ -378,34 +378,218 @@ layer_3/tile_data = PackedInt32Array(2752531, 393217, 4, 3080206, 393217, 4, 275
 [node name="ground" type="CharacterBody2D" parent="TileMap"]
 
 [node name="ground_colliders" type="CollisionPolygon2D" parent="TileMap/ground"]
+visible = false
 light_mask = 15
 visibility_layer = 15
 position = Vector2(-2, 2)
 polygon = PackedVector2Array(139, 129, 130, 358, 351, 400, 375, 582, 370, 619, 327, 635, 239, 635, 140, 643, 137, 862, 599, 897, 658, 1022, 754, 1041, 770, 1113, 714, 1153, 642, 1164, 634, 1265, 407, 1308, 236, 1300, 145, 1305, 132, 1423, 132, 1850, 137, 4266, 137, 4589, 2188, 4602, 4735, 4608, 7420, 4608, 7418, 3884, 7578, 3815, 7775, 3857, 7829, 4055, 7813, 4589, 8187, 4602, 8203, 4383, 8253, 4349, 8438, 4367, 8443, 4594, 8686, 4594, 8704, 3593, 8253, 3599, 8165, 3441, 8074, 3449, 8069, 3350, 8125, 3313, 8179, 3313, 8195, 3235, 8283, 3182, 8694, 3185, 8697, 131, 1462, 128, 1403, 181, 1406, 547, 1376, 641, 1096, 643, 1000, 534, 1024, 139, 981, 120, 188, 123, 52, -42, 61, -139, 2439, -164, 7672, -131, 8952, -105, 9271, 90, 9203, 3130, 9190, 4947, 7329, 4988, 3122, 4920, -201, 4933, -201, 2633, -153, 1087, -1090, 631, -486, -516, 187, 123)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TileMap/ground"]
+visible = false
 light_mask = 15
 visibility_layer = 15
 position = Vector2(-2, 2)
 polygon = PackedVector2Array(1777, 1347, 1783, 3017, 1942, 3081, 2330, 3068, 2323, 2712, 3314, 2693, 3352, 2109, 3231, 2039, 2311, 2039, 2304, 1385, 2247, 1252, 1827, 1299, 2256, 1329, 2271, 2035, 2317, 2088, 3214, 2075, 3312, 2191, 3284, 2639, 2281, 2677, 2264, 3005, 1871, 3005, 1833, 1717, 1830, 1302)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="TileMap/ground"]
+visible = false
 position = Vector2(-2, 2)
 polygon = PackedVector2Array(3838, 693, 3849, 1081, 3886, 1137, 4644, 1160, 4728, 1103, 4731, 685, 4663, 645, 3874, 640, 3928, 688, 4593, 676, 4675, 761, 4678, 1055, 4624, 1118, 3917, 1115, 3880, 1055, 3915, 685, 3871, 645)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="TileMap/ground"]
+visible = false
 position = Vector2(-2, 2)
 polygon = PackedVector2Array(7241, 667, 6761, 649, 6664, 702, 6667, 1027, 6681, 1195, 6721, 1259, 7195, 1281, 7290, 1220, 7291, 707, 7253, 731, 7261, 1190, 7160, 1261, 6743, 1241, 6711, 1192, 6699, 1017, 6699, 721, 6766, 672, 7279, 712, 7288, 704)
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="TileMap/ground"]
+visible = false
 position = Vector2(-2, 2)
 polygon = PackedVector2Array(2224, 3460, 4262, 3457, 4329, 3508, 4341, 3908, 4256, 3956, 2265, 3962, 2186, 3882, 2179, 3495, 2253, 3492, 2217, 3848, 2297, 3930, 4237, 3930, 4297, 3879, 4303, 3540, 4205, 3482, 2257, 3489, 2182, 3493)
 
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="TileMap/ground"]
+visible = false
 position = Vector2(-2, 2)
 polygon = PackedVector2Array(5098, 1665, 5428, 1675, 5475, 1715, 5500, 1886, 5493, 2642, 5518, 2680, 6391, 2687, 7332, 2689, 7395, 2721, 7424, 2797, 7422, 3123, 7356, 3179, 7184, 3192, 5565, 3195, 5527, 3197, 5502, 3215, 5493, 3509, 5450, 3556, 5334, 3581, 5053, 3574, 5006, 3509, 4995, 2721, 4972, 2680, 4436, 2685, 4362, 2595, 4364, 2227, 4483, 2171, 4959, 2175, 4995, 2124, 5008, 1711, 5024, 1694, 5038, 1702, 5044, 1713, 5022, 2124, 4972, 2202, 4487, 2205, 4393, 2249, 4386, 2584, 4445, 2658, 4968, 2656, 5026, 2707, 5028, 3493, 5076, 3545, 5426, 3543, 5464, 3466, 5468, 3190, 5551, 3168, 7193, 3161, 7379, 3125, 7392, 2804, 7291, 2728, 5549, 2723, 5459, 2671, 5464, 1787, 5412, 1690, 5061, 1730, 5042, 1704, 5028, 1691, 5047, 1681)
 
+[node name="foreground" type="CharacterBody2D" parent="TileMap"]
+position = Vector2(2020, 636.667)
+scale = Vector2(1.53337, 1.80001)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TileMap/foreground"]
+visible = false
+polygon = PackedVector2Array(-556.508, -249.999, -547.813, -20.3705, -508.683, -16.6668, -497.814, -259.258, -530.422, -272.221, -549.987, -259.258, -526.074, -262.962, -543.465, -255.554, -515.205, -257.406, -547.813, -257.406)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="TileMap/foreground"]
+visible = false
+polygon = PackedVector2Array(-1328.23, 24.0737, -1328.23, 224.073, -876.066, 216.665, -828.241, 235.184, -830.415, 272.22, -1391.27, 272.22, -1393.44, 220.369, -1389.1, 101.851, -1382.58, 33.3329)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="TileMap/foreground"]
+visible = false
+polygon = PackedVector2Array(130.432, 440.738, 176.083, 449.997, 169.561, 488.886, -86.9545, 485.182, -84.7805, 512.96, -2.17383, 512.96, 4.34778, 625.922, 39.1295, 631.478, 28.2603, 583.33, 95.6499, 592.589, 89.1283, 694.44, 39.1295, 707.403, 34.7817, 657.404, -2.17383, 664.811, 0, 824.069, -30.4341, 844.44, -54.3466, 792.588, -49.9988, 561.108, -128.258, 557.404, -134.779, 448.145, 41.3033, 442.59)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="TileMap/foreground"]
+visible = false
+position = Vector2(0, 1.60382)
+scale = Vector2(1, 0.99867)
+polygon = PackedVector2Array(217.386, 866.662, 586.942, 870.365, 589.116, 1127.77, 543.465, 1127.77, 530.422, 1042.59, 284.776, 1059.25, 284.776, 942.587, 484.771, 949.995, 526.074, 946.291, 534.77, 914.81, 215.212, 909.254)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="TileMap/foreground"]
+visible = false
+polygon = PackedVector2Array(358.687, 1581.47, 367.382, 1840.73, 421.729, 1837.03, 417.381, 1581.47)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="TileMap/foreground"]
+visible = false
+polygon = PackedVector2Array(460.859, 1649.99, 743.46, 1653.69, 743.46, 1694.43, 613.029, 1696.29, 630.42, 1722.21, 669.549, 1727.77, 665.201, 1759.25, 630.42, 1777.77, 563.03, 1761.1, 530.422, 1733.32, 576.073, 1712.95, 584.769, 1694.43, 467.38, 1696.29)
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="TileMap/foreground"]
+polygon = PackedVector2Array(784.764, 1659.25, 780.416, 1757.4, 813.024, 1768.51, 828.241, 1749.99, 839.11, 1664.81)
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="TileMap/foreground"]
+polygon = PackedVector2Array(1286.93, 1664.81, 1291.27, 1762.95, 1410.84, 1766.66, 1432.57, 1675.92, 1373.88, 1653.69)
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="TileMap/foreground"]
+polygon = PackedVector2Array(1117.36, 1670.36, 1147.8, 1690.73, 1163.02, 1677.77, 1158.67, 1662.95, 1141.28, 1661.1)
+
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="TileMap/foreground"]
+polygon = PackedVector2Array(2028.21, 1453.7, 2041.26, 1544.44, 2162.99, 1544.44, 2169.51, 1449.99)
+
+[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="TileMap/foreground"]
+polygon = PackedVector2Array(1878.22, 1037.03, 1893.43, 1044.44, 1908.65, 1029.62, 1895.61, 1024.07)
+
+[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="TileMap/foreground"]
+polygon = PackedVector2Array(2036.91, 1335.18, 2082.56, 1337.03, 2093.43, 735.181, 2034.73, 733.329)
+
+[node name="CollisionPolygon2D13" type="CollisionPolygon2D" parent="TileMap/foreground"]
+polygon = PackedVector2Array(2106.47, 1222.22, 2502.11, 1227.77, 2502.11, 1333.33, 2462.98, 1342.58, 2458.64, 1268.51, 2106.47, 1268.51)
+
+[node name="CollisionPolygon2D14" type="CollisionPolygon2D" parent="TileMap/foreground"]
+polygon = PackedVector2Array(2726.02, 1235.18, 3004.28, 1237.03, 3012.97, 1322.21, 2810.8, 1342.58, 2723.85, 1331.47)
+
+[node name="CollisionPolygon2D15" type="CollisionPolygon2D" parent="TileMap/foreground"]
+polygon = PackedVector2Array(3130.36, 1229.62, 3428.18, 1225.92, 3430.35, 1325.92, 3130.36, 1337.03)
+
+[node name="CollisionPolygon2D16" type="CollisionPolygon2D" parent="TileMap/foreground"]
+polygon = PackedVector2Array(3962.95, 1509.25, 4458.59, 1505.55, 4460.76, 1551.84, 3958.6, 1551.84)
+
+[node name="CollisionPolygon2D17" type="CollisionPolygon2D" parent="TileMap/foreground"]
+polygon = PackedVector2Array(4454.24, 1457.4, 4458.59, 1614.81, 4580.32, 1614.81, 4589.02, 1461.1)
+
+[node name="CollisionPolygon2D18" type="CollisionPolygon2D" parent="TileMap/foreground"]
+polygon = PackedVector2Array(4036.86, 2094.43, 4030.34, 2303.69, 3804.26, 2290.73, 3799.91, 2342.58, 4415.11, 2335.17, 4415.11, 2298.14, 4156.42, 2287.02, 4175.99, 2094.43)
+
+[node name="CollisionPolygon2D19" type="CollisionPolygon2D" parent="TileMap/foreground"]
+polygon = PackedVector2Array(3671.65, 2249.99, 3673.82, 1861.1, 3630.35, 1861.1, 3626, 2246.28)
+
+[node name="CollisionPolygon2D20" type="CollisionPolygon2D" parent="TileMap/foreground"]
+polygon = PackedVector2Array(4462.94, 1955.54, 4491.2, 1975.91, 4491.2, 1937.03)
+
+[node name="CollisionPolygon2D21" type="CollisionPolygon2D" parent="TileMap/foreground"]
+polygon = PackedVector2Array(1286.93, 112.962, 1321.71, 129.629, 1334.75, 111.11, 1315.19, 92.5919)
+
+[node name="CollisionPolygon2D22" type="CollisionPolygon2D" parent="TileMap/foreground"]
+position = Vector2(84.7806, -1.85205)
+polygon = PackedVector2Array(1286.93, 112.962, 1321.71, 129.629, 1334.75, 111.11, 1315.19, 92.5919)
+
+[node name="CollisionPolygon2D23" type="CollisionPolygon2D" parent="TileMap/foreground"]
+polygon = PackedVector2Array(3336.88, 264.813, 3332.53, 103.703, 3134.71, 92.5919, 3132.53, 122.221, 3212.97, 170.369, 3121.66, 257.406, 3139.05, 270.369, 3236.88, 188.888)
+
+[node name="CollisionPolygon2D24" type="CollisionPolygon2D" parent="TileMap/foreground"]
+polygon = PackedVector2Array(-552.161, 1540.73, -506.51, 1548.14, -508.683, 1527.77)
+
+[node name="CollisionPolygon2D25" type="CollisionPolygon2D" parent="TileMap/foreground"]
+position = Vector2(252.168, 66.6661)
+polygon = PackedVector2Array(-552.161, 1540.73, -506.51, 1548.14, -508.683, 1527.77)
+
+[node name="CollisionPolygon2D26" type="CollisionPolygon2D" parent="TileMap/foreground"]
+position = Vector2(326.079, 135.184)
+polygon = PackedVector2Array(-552.161, 1540.73, -506.51, 1548.14, -508.683, 1527.77)
+
+[node name="CollisionPolygon2D27" type="CollisionPolygon2D" parent="TileMap/foreground"]
+position = Vector2(254.342, 207.406)
+polygon = PackedVector2Array(-552.161, 1540.73, -506.51, 1548.14, -508.683, 1527.77)
+
+[node name="CollisionPolygon2D28" type="CollisionPolygon2D" parent="TileMap/foreground"]
+position = Vector2(-82.6067, 209.258)
+polygon = PackedVector2Array(-552.161, 1540.73, -506.51, 1548.14, -508.683, 1527.77)
+
+[node name="CollisionPolygon2D29" type="CollisionPolygon2D" parent="TileMap/foreground"]
+position = Vector2(93.4761, 422.22)
+polygon = PackedVector2Array(-552.161, 1540.73, -506.51, 1548.14, -508.683, 1527.77)
+
+[node name="CollisionPolygon2D30" type="CollisionPolygon2D" parent="TileMap/foreground"]
+position = Vector2(4.34778, 492.59)
+polygon = PackedVector2Array(-552.161, 1540.73, -506.51, 1548.14, -508.683, 1527.77)
+
+[node name="CollisionPolygon2D31" type="CollisionPolygon2D" parent="TileMap/foreground"]
+position = Vector2(-160.866, 490.738)
+polygon = PackedVector2Array(-552.161, 1540.73, -506.51, 1548.14, -508.683, 1527.77)
+
+[node name="CollisionPolygon2D32" type="CollisionPolygon2D" parent="TileMap/foreground"]
+position = Vector2(-163.04, 418.516)
+polygon = PackedVector2Array(-552.161, 1540.73, -506.51, 1548.14, -508.683, 1527.77)
+
+[node name="CollisionPolygon2D33" type="CollisionPolygon2D" parent="TileMap/foreground"]
+position = Vector2(-247.82, 346.294)
+polygon = PackedVector2Array(-552.161, 1540.73, -506.51, 1548.14, -508.683, 1527.77)
+
+[node name="CollisionPolygon2D34" type="CollisionPolygon2D" parent="TileMap/foreground"]
+position = Vector2(-326.079, 420.368)
+polygon = PackedVector2Array(-552.161, 1540.73, -506.51, 1548.14, -508.683, 1527.77)
+
+[node name="CollisionPolygon2D35" type="CollisionPolygon2D" parent="TileMap/foreground"]
+position = Vector2(-328.253, 270.369)
+polygon = PackedVector2Array(-552.161, 1540.73, -506.51, 1548.14, -508.683, 1527.77)
+
+[node name="CollisionPolygon2D36" type="CollisionPolygon2D" parent="TileMap/foreground"]
+position = Vector2(-417.381, 59.2587)
+polygon = PackedVector2Array(-552.161, 1540.73, -506.51, 1548.14, -508.683, 1527.77)
+
+[node name="CollisionPolygon2D37" type="CollisionPolygon2D" parent="TileMap/foreground"]
+position = Vector2(256.516, -862.958)
+polygon = PackedVector2Array(-552.161, 1540.73, -506.51, 1548.14, -508.683, 1527.77)
+
+[node name="CollisionPolygon2D38" type="CollisionPolygon2D" parent="TileMap/foreground"]
+position = Vector2(-584.769, -1072.22)
+polygon = PackedVector2Array(-552.161, 1540.73, -506.51, 1548.14, -508.683, 1527.77)
+
+[node name="CollisionPolygon2D39" type="CollisionPolygon2D" parent="TileMap/foreground"]
+position = Vector2(-665.201, -931.477)
+polygon = PackedVector2Array(-552.161, 1540.73, -506.51, 1548.14, -508.683, 1527.77)
+
+[node name="CollisionPolygon2D40" type="CollisionPolygon2D" parent="TileMap/foreground"]
+position = Vector2(-667.375, -1146.29)
+polygon = PackedVector2Array(-552.161, 1540.73, -506.51, 1548.14, -508.683, 1527.77)
+
+[node name="CollisionPolygon2D41" type="CollisionPolygon2D" parent="TileMap/foreground"]
+position = Vector2(3343.4, -716.663)
+polygon = PackedVector2Array(-552.161, 1540.73, -506.51, 1548.14, -508.683, 1527.77)
+
+[node name="CollisionPolygon2D42" type="CollisionPolygon2D" parent="TileMap/foreground"]
+position = Vector2(3339.05, -861.106)
+polygon = PackedVector2Array(-552.161, 1540.73, -506.51, 1548.14, -508.683, 1527.77)
+
+[node name="CollisionPolygon2D43" type="CollisionPolygon2D" parent="TileMap/foreground"]
+position = Vector2(3595.57, -788.885)
+polygon = PackedVector2Array(-552.161, 1540.73, -506.51, 1548.14, -508.683, 1527.77)
+
+[node name="CollisionPolygon2D44" type="CollisionPolygon2D" parent="TileMap/foreground"]
+position = Vector2(3671.65, -716.663)
+polygon = PackedVector2Array(-552.161, 1540.73, -506.51, 1548.14, -508.683, 1527.77)
+
+[node name="CollisionPolygon2D45" type="CollisionPolygon2D" parent="TileMap/foreground"]
+position = Vector2(3512.96, -644.441)
+polygon = PackedVector2Array(-552.161, 1540.73, -506.51, 1548.14, -508.683, 1527.77)
+
+[node name="CollisionPolygon2D46" type="CollisionPolygon2D" parent="TileMap/foreground"]
+position = Vector2(3593.39, -577.775)
+polygon = PackedVector2Array(-552.161, 1540.73, -506.51, 1548.14, -508.683, 1527.77)
+
+[node name="CollisionPolygon2D47" type="CollisionPolygon2D" parent="TileMap/foreground"]
+position = Vector2(3421.66, -648.145)
+polygon = PackedVector2Array(-552.161, 1540.73, -506.51, 1548.14, -508.683, 1527.77)
+
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+visible = false
 light_mask = 15
 visibility_layer = 15
 position = Vector2(2020, 636.667)
