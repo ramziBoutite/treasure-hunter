@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Treasure hunter"
-run/main_scene="res://split_screen_test/game_root.tscn"
+run/main_scene="res://root/game_root.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
