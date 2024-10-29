@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-@export var move_speed=500
+@export var move_speed=400
 
 @export var rotaion_sensitivity=5
 
@@ -35,7 +35,7 @@ func new_control(delta):
 	
 	
 	if current_player=="1":
-		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+		if Input.is_action_just_pressed("fire player one"):
 			shoot()
 		
 		
@@ -48,7 +48,7 @@ func new_control(delta):
 		move_and_slide()
 
 	if current_player=="2":
-		if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
+		if Input.is_action_just_pressed("fire player two"):
 			shoot()
 		var rotation_direction = Input.get_axis("left","right")
 

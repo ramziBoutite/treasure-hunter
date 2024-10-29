@@ -4,14 +4,14 @@ extends Area2D
 
 var target:Vector2
 
-var speed = 200
+var speed = 15
 
 
 var angle:float
 
 @onready var delte_timer = $Timer
 
-@export var damage :int = 5
+@export var damage :int = 10
 
 func _ready():
 	delte_timer.start()
