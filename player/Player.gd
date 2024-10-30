@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
 
-@export var move_speed=400
+@export var move_speed=300
 
-@export var rotaion_sensitivity=5
+@export var rotaion_sensitivity=3.5
 
 
 @onready var canon_bullet = preload("res://bullets/bullet.tscn")
@@ -73,11 +73,12 @@ func shoot():
 
 
 func handel_health(damage):
-	if current_health<=5:
-		loos()
-	else:
+	if current_health>0:
 		current_health-=damage
 		$UX/progress_bar.value=current_health
+	if current_health<=0:
+		loos()
+
 
 func loos():
 	rotation_degrees=0
@@ -87,5 +88,6 @@ func loos():
 	$CollisionShape2D.queue_free()
 	set_physics_process(false)
 
-
+func powerup(powerup):
+	pass
 

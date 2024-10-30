@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://root/game_root.gd" id="1_ii3yw"]
 [ext_resource type="PackedScene" uid="uid://n6mb5qyd4lpg" path="res://player/Player.tscn" id="3_v4jas"]
-[ext_resource type="PackedScene" path="res://treasure.tscn" id="4_e85a8"]
+[ext_resource type="PackedScene" uid="uid://cvnde4fxgsyfc" path="res://treasure.tscn" id="4_e85a8"]
 [ext_resource type="PackedScene" uid="uid://bcuoottxrg0mu" path="res://trial-scene.tscn" id="4_m30lo"]
 
 [node name="Game_Root" type="Node"]
@@ -51,7 +51,7 @@ light_mask = 15
 visibility_layer = 15
 
 [node name="coldowntimer" parent="HBoxContainer/SubViewportContainer1/SubViewport/split_screen_map/player" index="4"]
-wait_time = 0.55
+wait_time = 0.768
 
 [node name="Area2D" parent="HBoxContainer/SubViewportContainer1/SubViewport/split_screen_map" instance=ExtResource("4_e85a8")]
 z_as_relative = false

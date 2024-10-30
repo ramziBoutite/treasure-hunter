@@ -28,3 +28,7 @@ texture = ExtResource("2_hefbl")
 position = Vector2(-1, 2)
 scale = Vector2(0.3, 0.3)
 shape = SubResource("RectangleShape2D_agokr")
+
+[node name="poweruptimer" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true

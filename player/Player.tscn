@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://player/Player.gd" id="1_e3v4i"]
 [ext_resource type="Texture2D" uid="uid://c0770qcfhh2go" path="res://assets/kenney_pirate-pack/PNG/Default size/Ship parts/cannonBall.png" id="2_3uh3w"]
 [ext_resource type="Texture2D" uid="uid://mg20sysqllsg" path="res://assets/kenney_pirate-pack/PNG/Default size/Ships/ship (9).png" id="2_hkwxu"]
-[ext_resource type="Theme" path="res://assets/fonts/text.tres" id="3_wl71h"]
+[ext_resource type="Theme" uid="uid://dvn0p83b3tsxy" path="res://assets/fonts/text.tres" id="3_wl71h"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_78d4d"]
 radius = 32.0

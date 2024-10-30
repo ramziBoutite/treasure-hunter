@@ -39,6 +39,7 @@ func _on_body_entered(body):
 
 	if body.is_in_group("player"):
 		body.handel_health(damage)
+		queue_free()
 
 	elif not body is TileMap:
 		queue_free()
